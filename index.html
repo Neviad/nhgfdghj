@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Be My Valentine? 🧸💖</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(to right, #ffb6c1, #ff69b4);
+            color: white;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 40px;
+        }
+
+        img {
+            width: 250px;
+            margin-top: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background-color: #ff1493;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: white;
+            color: #ff1493;
+            position: absolute;
+        }
+
+        #loveMessage {
+            display: none;
+            font-size: 25px;
+            margin-top: 30px;
+        }
+
+        .celebrationGif {
+            display: none;
+            width: 200px;
+            margin: 15px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px white;
+        }
+
+        #gifContainer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hey Handsome 😏💖<br>Will You Be My Valentine? 💖🧸</h1>
+
+<!-- 💖 Main Page GIF -->
+<img src="image.gif" alt="Cute GIF">
+
+<br>
+
+<button id="yesBtn">YES 😍</button>
+<button id="noBtn">NO 🙈</button>
+
+<div id="loveMessage">
+    You had no choice anyway 😌💘 <br>
+    Bubu + Dudu Forever 🧸💞
+</div>
+
+<!-- 🎉 Celebration GIFs -->
+<div id="gifContainer">
+    <img src="us.gif" class="celebrationGif" id="gif1">
+    <img src="tkthao219-bubududu.gif" class="celebrationGif" id="gif2">
+</div>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", function() {
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 50);
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
+
+    document.getElementById("yesBtn").onclick = function() {
+        document.getElementById("loveMessage").style.display = "block";
+        document.getElementById("gif1").style.display = "inline-block";
+        document.getElementById("gif2").style.display = "inline-block";
+    };
+</script>
+
+</body>
+</html>
